@@ -3,7 +3,7 @@ this is a huge pitfall to shell utilities and scripting
 
 [word splitting tutorial](http://mywiki.wooledge.org/WordSplitting)
 
-#### bottom line: double quote all the time "$var"
+#### bottom line: `double quote all the time "$var"`
 
 #### args
 start with a small script to test the parsing by shell of arguments
