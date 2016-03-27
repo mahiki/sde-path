@@ -10,5 +10,6 @@ and the like
 
 #### contents
 
-- [x] word splitting in [shell parser](http://mywiki.wooledge.org/WordSplitting)
-- [ ] 
+- word-splitting.md in [shell parser](http://mywiki.wooledge.org/WordSplitting)
+- if-conditionals.md *examples of if, loop*
+	+ `test-if.sh`
