@@ -16,8 +16,9 @@ all the items in issues are cool things to do. some of the issues refer to other
 ### the directory tree
 ```
 sde-path
-	linux-cmd-line			the book notes and excercizes
-
+├── linux-cmd-line			the book notes and excercizes
+├── nix					lessons and notes from all sources. see mahiki/handy/ for most used
+└── webdev					website work
 ```
 
 algs-sedgewick, java-sedge are in own repo  

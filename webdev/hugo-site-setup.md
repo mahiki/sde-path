@@ -6,7 +6,6 @@ steps taken on first hugo deployment
 - [ ] BISS BI blog
 	+ scot-challenge project
 	+ blog
-	+ 
 
 ### short summary
 1. `hugo new site <sitename>`
