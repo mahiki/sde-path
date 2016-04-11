@@ -12,12 +12,14 @@ all the items in issues are cool things to do. some of the issues refer to other
  - [ ] **linux command line** book [#10](https://github.com/mahiki/sde-path/issues/10)
  - [ ] **make this website in one hour** [#11](https://github.com/mahiki/sde-path/issues/11)
  - [ ] **[programming in java](https://github.com/mahiki/java-sedge)** [#14](https://github.com/mahiki/sde-path/issues/14) own repo
+ - [ ] **`/composing-programs/`** [#55](https://github.com/mahiki/sde-path/issues/55), python and SDE
 
 ### the directory tree
 ```
 sde-path
 ├── linux-cmd-line			the book notes and excercizes
 ├── nix					lessons and notes from all sources. see mahiki/handy/ for most used
+├── composing-programs			survey of this awesome booksite, in python
 └── webdev					website work
 ```
 
