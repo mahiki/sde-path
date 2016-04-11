@@ -36,7 +36,7 @@ it's ***fast!***
 		├── content					# subdirectory for each section like: blog, projects, about
 		├── data					# config generator content
 		├── layouts					# conversion standards
-		├── (public)				# the generated site is here (not created until hugo builds)
+		├── public					# (the generated site is here, not created until hugo builds)
 		└── static					# images, CSS, javascript
 
 	hugo new post/small-council-2016-04-18.md
@@ -79,6 +79,20 @@ that loads the twentyfourteen theme, again drafts not rendered.
 	hugo server --theme=twentyfourteen --buildDrafts
 
 and it works!!
+
+*I suggest saving the themes repo somewhere (500MB) and symlinking themes I'll use into the site folders*
+
+### dialing it in
+now that you have some content pages (not drafts), you can start the server with other themes
+
+	hugo -t grid-side					# try a bunch
+
+- [ ] there are tutorial notes about customizing with new images, etc. come back to that
+
+### maintaining this blog
+for the Merlin scmall council blog, i'll include a page on how to maintain the blog site.
+
+	hugo new maintain-this-blog/readme.md
 
 
 
