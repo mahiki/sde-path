@@ -13,4 +13,5 @@ apache lucene is the search engine under it all [apache lucene](https://lucene.a
 - preface: beginner's guide how to load, analyze and query data. resources online listed.
 - I. **getting started**
 	+ install and setups
+	+ java required
 	+ 
