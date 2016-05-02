@@ -7,8 +7,6 @@ this is a study of using the command line in a linux/unix environment
 
 
 #### directory tree
-not including scratch files
-
 
 	linux-cmd-line
 	├── nix-cmd-line-best-ones.md
@@ -19,3 +17,4 @@ not including scratch files
 	├── src
 	│   └── hello-world -> /Users/merlinr/repo/utility/shell/hello-world
 	└── vimtutor.txt
+

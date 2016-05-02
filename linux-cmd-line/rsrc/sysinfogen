@@ -1,0 +1,26 @@
+#!/bin/bash
+# -------------------------------------------------------------------
+#    a system info page generator from Linux Command Line
+#
+#      tested:    more
+#      author:    merlinr@
+# -------------------------------------------------------------------
+
+# the formal and uncommon way to define immutable constant
+declare -r TITLE="$HOSTNAME System Information Report"
+
+CURRENT_TIME=$(date + "%x %r %Z")
+TIME_STAMP="Generated $CURRENT_TIME by $USER"
+
+cat << _EOF_
+<html>
+    <head>
+        <title>$TITLE</title>
+    </head>
+    <body>
+        <h1>$TITLE</h1>
+        <p>$TIME_STAMP</p>
+    </body>
+</html>
+_EOF_
+

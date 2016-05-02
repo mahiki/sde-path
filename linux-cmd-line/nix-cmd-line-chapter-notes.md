@@ -27,7 +27,27 @@ its good practice to write shell scripts in standard bash, rather than zsh or wh
 	# This is our first script.
 	echo 'Hello World!
 
-#### executable and findable by the shell
+### executable and findable by the shell
 	chmod 755 scriptfile
 	ln -s ./hello_world ~/bin
+
+### variable declarations and other notes
+all variables are strings and don't need declarations, but there are some rarely used options. `declare` with an -r flag creates an immutable constant (-r, 'read only')
+
+	declare -r TITLE="$HOSTNAME System Information Report"
+
+	cat << _EOF_			# here document, stops at token
+
+### here documents
+a way to pass text to a command. quotes are treated as literal text. the example from the book shows you can use it to pass a list of commands to a program:
+
+	ftp -n << _EOF_
+	open $FTP_SERVER
+	user anonymous me@linuxbox
+	cd $FTP_PATH
+	hash
+	get $REMOTE_FILE
+	bye
+	_EOF_
+	ls -l $REMOTE_FILE
 
