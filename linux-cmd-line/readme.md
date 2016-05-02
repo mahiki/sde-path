@@ -11,6 +11,11 @@ not including scratch files
 
 
 	linux-cmd-line
+	├── nix-cmd-line-best-ones.md
+	├── nix-cmd-line-chapter-notes.md
 	├── readme.md
-	├── A-begin-linux-cmd-line.md			# the stuff i need right now 
-
+	├── rsrc
+	│   └── foo.txt
+	├── src
+	│   └── hello-world -> /Users/merlinr/repo/utility/shell/hello-world
+	└── vimtutor.txt
