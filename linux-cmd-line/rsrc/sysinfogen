@@ -2,25 +2,53 @@
 # -------------------------------------------------------------------
 #    a system info page generator from Linux Command Line
 #
-#      tested:    more
-#      author:    merlinr@
+#   note:       
+#   tested:     PASS
+#   author:     merlinr@
 # -------------------------------------------------------------------
 
 # the formal and uncommon way to define immutable constant
 declare -r TITLE="$HOSTNAME System Information Report"
 
-CURRENT_TIME=$(date + "%x %r %Z")
+CURRENT_TIME=$(date +"%x %r %Z")
 TIME_STAMP="Generated $CURRENT_TIME by $USER"
 
-cat << _EOF_
+report_uptime () {
+    cat <<- EOF
+        <h4>System Uptime</h4>
+        <pre>$(uptime)</pre>
+EOF
+    return
+}
+
+report_disk_space () {
+    cat <<- EOF
+        <h4>Disk Space Utilization (in MB)</h4>
+        <pre>$(df -h)</pre>
+EOF
+    return
+}
+
+report_home_space () {
+    cat <<- EOF
+        <h4>Home Space Utilization</h4>
+        <pre>$(du -cmd1 ~ | sort -nr)</pre>
+EOF
+    return
+}
+
+
+cat << EOF
 <html>
     <head>
         <title>$TITLE</title>
     </head>
     <body>
-        <h1>$TITLE</h1>
+        <h3>$TITLE</h3>
         <p>$TIME_STAMP</p>
+        $(report_disk_space)
+        $(report_uptime)
+        $(report_home_space)
     </body>
 </html>
-_EOF_
-
+EOF
