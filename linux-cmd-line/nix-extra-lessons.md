@@ -24,7 +24,7 @@ critical things i've learned while studying all this other stuff
 - bash invoked with `/bin/sh` will use `--posix` switch to mimix POSIX
 - `#!/bin/bash` will fail with error message if bash is not available. *but could this be better? and, it didn't.*
 
-### shebang, usage, arguments, flags
+### shebang, usage, arguments, flags in `datafilegen`
 The script `repo/utility/shell/datafilegen` contains many of the idioms used in shell scripting:
 
 - portable shebang
@@ -34,3 +34,11 @@ The script `repo/utility/shell/datafilegen` contains many of the idioms used in 
 - brace expansion
 - user defined function
 - index array
+- usage error message with exit code
+- argument flags
+
+### FreeBSD unix source code example
+learn much from unix souce code in C, such as [FreeBSD source code `/usr/bin`](http://svnweb.freebsd.org/csrg/usr.bin/)
+
+	repo/sde-path/nix/src/head.c			# great example of standard bash code
+
