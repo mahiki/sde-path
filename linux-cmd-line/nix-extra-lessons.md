@@ -60,22 +60,24 @@ put the following usage function before the getops case statement, and call the 
 treating the 'no arguments/options provided' option by `usage` after the getops case switch. no argument passed to getops makes control flow past getops completely.
 
 #### `getops` script running the main program
+the getops routine accepts flags and arguments with the command.  
+`mainfunction` is the primary function of the script  
+`usage` is the error message to the user  
+the flow below handles the number of arguments, the option flag and argument, integer checking of argument, and the default no-argument invocation is the default at the bottom.
+
 ```bash
 # main
 while getopts ":n:" opt; do
 
     if [[ $# -gt 2 ]]; then
-
         echo "Invalid number of arguments: $#"
         usage
-
     fi
 
     case $opt in
         n)
             if [[ "$OPTARG" =~ ^[0-9]+$ ]] 2>/dev/null; then
-                echo "numargs:" $#
-                writedata $OPTARG  >&2
+                mainfunction $OPTARG
                 exit
             fi
             echo "Invalid argument (n must non-negative integer): $OPTARG"
@@ -97,9 +99,9 @@ while getopts ":n:" opt; do
 done
 
 if [ ! -z "$1" ]; then
-    
     echo "Illegal argument: $1"
     usage
-
 fi
+
+mainfunction DEFAULT_ARG 			# the no arguments option
 ```
