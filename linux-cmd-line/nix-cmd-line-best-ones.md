@@ -1,7 +1,15 @@
 ## Part A - Linux Command Line
 *notes and excercizes from the book, save the best*
 
-## stuff
+#### variables
+	declare -r var=<value>				# immutable (read-only variable declaration)
+	declare -i int=<integer value>
+	local -a array=(element1 element2 ...)	# declare local variable (say for inside a function)
+
+##### here documents
+	cat << EOF
+	text and variables, with "quoted" or 'single-quoted' stuff
+	EOF							# mainly because 
 
 ## bash scripts - ch 24
 ### loops in bash scripts

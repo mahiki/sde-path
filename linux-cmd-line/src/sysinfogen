@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 # -------------------------------------------------------------------
 #    a system info page generator from Linux Command Line
 #
@@ -40,11 +40,10 @@ EOF
 
 cat << EOF
 <html>
-    <head>
-        <title>$TITLE</title>
-    </head>
+    <h2>
+        <title><pre>$TITLE</pre></title>
+    </h2>
     <body>
-        <h3>$TITLE</h3>
         <p>$TIME_STAMP</p>
         $(report_disk_space)
         $(report_uptime)
