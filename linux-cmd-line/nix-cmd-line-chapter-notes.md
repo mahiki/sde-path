@@ -85,9 +85,29 @@ better than aliases, and better than piles of script files in your ~/bin (maybe)
 its debatable, I don't mind the ~/bin locations, and it allows me to deal with each script separately. there is a place for simple utility functions though, "when the time comes you will know"
 
 ## ch 27 flow control and branching
+
+### if 
 now you are into the `if`
 
+	if [[ "$x" = 5 ]]; then echo "equals 5"; fi
+
+	if [[ -e "$FILE" ]]; then echo "file $FILE exists"; fi
+
+#### `test` notes:  
+- double quotes protect the test against empty variable values: ***use them***
+- `[[` is improved `test` command, better than `[`
+	+ regex matching test with `=~`
+	+ `==` operator supports pattern matching like file expansion
+
+#### `test` types: files, strings, integers
 
 
 
+#### examples
+	if [ $y = 5 ]; then echo "equals 5"; fi			# y has no assigned value
+		zsh: parse error: condition expected: =
+	
+	if [[ "$INT" =~ ^-?[0-9]+$ ]]; then echo "string INT is an integer"; fi
+	
+	if [[ "$FILE" == "foo.*" ]]; then echo "FILE matches 'foo.*' "; fi
 
