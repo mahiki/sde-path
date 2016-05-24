@@ -101,8 +101,6 @@ now you are into the `if`
 
 #### `test` types: files, strings, integers
 
-
-
 #### examples
 	if [ $y = 5 ]; then echo "equals 5"; fi			# y has no assigned value
 		zsh: parse error: condition expected: =

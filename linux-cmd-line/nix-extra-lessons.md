@@ -105,3 +105,22 @@ fi
 
 mainfunction DEFAULT_ARG 			# the no arguments option
 ```
+
+#### command arguments (positional parameters)
+the variables `$#` and `$@` are the most useful, to assign the parameters to an array there are several ways but here are simplest, 'for member' and 'c-style for loop declaration':
+
+	declare -a array=("$@") 
+	declare -i args_num="$#"
+	echo "args: " $@
+	echo "args_num: " $#
+	
+	for array; do
+		echo "$array"
+	done
+
+alternately,
+
+	for ((i=0; i<"$#"; i++)); do
+	    echo "array[$i]: " ${array[$i]}
+	done
+
