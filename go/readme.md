@@ -6,6 +6,6 @@
 web development, apps, networking, whatever else is in there
 
 ### issues
-- #66 write web app in go with standard library
-- #62 hugo static site generator tutorial
+- GH-66 write web app in go with standard library
+- GH-62 hugo static site generator tutorial
 
