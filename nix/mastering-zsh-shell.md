@@ -29,7 +29,7 @@
       
       # because all the files are nested within the zsh-demo folder you will
       # be able to easily delete them by running:
-      # rm -r zsh-demo  
+      # rm -r zsh-demo
 
 ```
 now you are ready
