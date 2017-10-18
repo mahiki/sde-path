@@ -186,7 +186,6 @@ then we store that substituted path in the $output_dir variable.
 	splitting file name into an array to extract elements like continent, country, calculations
 
 #### use previous argument for new command with bang
-
 	echo zsh-demo/data/asia/laos/population.txt
 	ls -l !!1 <tab>				# ls -l zsh-demo/data/asia/laos/population.txt
 
@@ -198,10 +197,16 @@ then we store that substituted path in the $output_dir variable.
 
 #### the event designators
 ```
+# 3 arguments
+# ![bang] command:[![previous] | -N[Nth previous] | $[last]] argument:[N[Nth] | $[last]]
 !!					# previous command
-!!1					# first argument of previous command
+!!1					# 1st argument of previous command
+!!3					# 3rd argument of previous command
+!!$					# last argument of previous command
+!!*					# all previous arguments
+!$					# last argument of previous command
 !-2$					# last argument from 2 commands ago
-!-2:2					# second argument from 2 commands ago
+!-3:2					# second argument from 3 commands ago
 ```
 
 ### other things
